@@ -1,38 +1,60 @@
-# Portafolio Jefferson Hernández - ASP.NET Core MVC
+# Portafolio Jefferson Hernández — ASP.NET Core MVC
 
-Portafolio personal en ASP.NET Core MVC con diseño negro y verde esmeralda.
+Portafolio personal desarrollado con ASP.NET Core MVC, C# y un diseño moderno en negro y verde esmeralda.
+
+## Acerca del proyecto
+
+Este proyecto presenta mi perfil profesional, mis habilidades y mis proyectos como estudiante de Ingeniería en Sistemas de Información.
+
+## Tecnologías utilizadas
+
+- C#
+- ASP.NET Core MVC
+- .NET SDK 10.0
+- HTML5
+- CSS3
+- JavaScript
+- Git y GitHub
 
 ## Requisitos
+
 - .NET SDK 10.0
-- Visual Studio Code (opcional)
+- Visual Studio Code o Visual Studio
 - Extensión C# Dev Kit (opcional)
 
-## Ejecutar el proyecto
-1. Extrae el archivo ZIP.
-2. Abre la carpeta `PortafolioJeffersonMVC` en Visual Studio Code.
-3. Abre una terminal en la carpeta donde está `PortafolioJeffersonMVC.csproj`.
-4. Ejecuta:
+## Cómo ejecutar el proyecto
+
+1. Abre la carpeta `PortafolioJeffersonMVC` en Visual Studio Code.
+2. Abre una terminal en la carpeta donde se encuentra `PortafolioJeffersonMVC.csproj`.
+3. Ejecuta los siguientes comandos:
 
 ```bash
 dotnet restore
 dotnet run
 ```
 
-5. Abre en el navegador la URL local que aparezca en la terminal, por ejemplo `http://localhost:5000` o la URL indicada por ASP.NET Core.
+4. Espera a que ASP.NET Core muestre la dirección local.
+5. Abre esa dirección en tu navegador.
 
-## Estructura
+## Estructura del proyecto
+
 - `Controllers/HomeController.cs`: controlador principal.
 - `Models/PortfolioViewModel.cs`: modelo de datos del portafolio.
-- `Views/Home/Index.cshtml`: vista principal.
-- `Views/Shared/_Layout.cshtml`: diseño común.
-- `wwwroot/css/site.css`: estilos.
-- `wwwroot/js/site.js`: menú móvil.
+- `Views/Home/Index.cshtml`: página principal.
+- `Views/Shared/_Layout.cshtml`: diseño general.
+- `wwwroot/css/site.css`: estilos visuales.
+- `wwwroot/js/site.js`: funciones JavaScript.
 - `Program.cs`: configuración de la aplicación.
 
 ## Personalización
-- Edita el nombre, profesión, ubicación, habilidades y proyectos en `Controllers/HomeController.cs`.
-- Cambia el enlace de GitHub en `Views/Home/Index.cshtml`.
-- Puedes añadir una foto real reemplazando el círculo con las iniciales JH.
-- Las fuentes se cargan desde Google Fonts; para utilizarlas hace falta conexión a internet.
 
-Este proyecto es una plantilla de portafolio. Revisa y adapta la información para que coincida con tu experiencia real.
+- Modifica el nombre, la profesión, la ubicación, las habilidades y los proyectos en los archivos correspondientes.
+- Actualiza el enlace de GitHub en `Views/Home/Index.cshtml`.
+- Puedes incorporar una fotografía personal.
+- Las fuentes de Google Fonts requieren conexión a internet.
+
+## Autor
+
+**Jefferson Hernández**
+
+Portafolio personal desarrollado como proyecto de aprendizaje.
