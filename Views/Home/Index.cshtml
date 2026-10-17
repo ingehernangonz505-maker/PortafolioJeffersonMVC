@@ -1,0 +1,125 @@
+@model PortfolioViewModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<header class="header">
+    <nav class="navbar">
+        <a asp-controller="Home" asp-action="Index" asp-fragment="inicio" class="logo">JH<span>.</span></a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <p class="tag">PORTAFOLIO PERSONAL</p>
+            <h1>Hola, soy <span>@Model.Name</span></h1>
+            <h2>@Model.Profession</h2>
+            <p class="hero-description">@Model.Introduction</p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
+                <a href="#contacto" class="btn btn-outline">Contactarme</a>
+            </div>
+            <div class="social-text">Desarrollo web · Flutter · Firebase · GitHub</div>
+        </div>
+        <aside class="hero-card">
+            <div class="avatar">JH</div>
+            <p class="card-label">ESTUDIANTE Y DESARROLLADOR</p>
+            <h3>Construyendo ideas</h3>
+            <p>Aprendiendo, creando y mejorando cada día a través de la tecnología.</p>
+            <div class="status"><span></span> En constante aprendizaje</div>
+        </aside>
+    </section>
+
+    <section class="section about" id="sobre-mi">
+        <p class="tag">CONÓCEME</p>
+        <h2 class="section-title">Sobre <span>mí</span></h2>
+        <div class="about-content">
+            <div class="about-mark">JH<span>.</span></div>
+            <div>
+                <h3>La tecnología es mi camino</h3>
+                <p>@Model.About</p>
+                <p>@Model.AboutDetails</p>
+                <p>Mi objetivo es crecer profesionalmente y desarrollar soluciones digitales que aporten valor a las
+                    personas y a las organizaciones.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills-section" id="habilidades">
+            <p class="tag">LO QUE ESTOY APRENDIENDO</p>
+            <h2 class="section-title">Mis <span>habilidades</span></h2>
+            <div class="skills-grid">
+                @foreach (var skill in Model.Skills)
+                {
+                    <article class="skill-card">
+                        <div class="skill-icon">@skill.Icon</div>
+                        <h3>@skill.Name</h3>
+                        <p>@skill.Description</p>
+                    </article>
+                }
+            </div>
+        </section>
+
+        <section class="section projects" id="proyectos">
+            <p class="tag">MI TRABAJO</p>
+            <h2 class="section-title">Mis <span>proyectos</span></h2>
+            <p class="section-description">Algunos proyectos en los que he trabajado o que estoy desarrollando.</p>
+            <div class="projects-grid">
+                @foreach (var project in Model.Projects)
+                {
+                    <article class="project-card">
+                        <div class="project-number">@project.Number</div>
+                        <p class="project-type">@project.Type</p>
+                        <h3>@project.Name</h3>
+                        <p>@project.Description</p>
+                        <div class="chips">
+                            @foreach (var technology in project.Technologies)
+                            {
+                                <span>@technology</span>
+                            }
+                        </div>
+                    </article>
+                }
+            </div>
+        </section>
+
+        <section class="section objective">
+            <div class="objective-box">
+                <p class="tag">MI VISIÓN</p>
+                <h2>Convertir ideas en <span>soluciones reales.</span></h2>
+                <p>@Model.Objective</p>
+            </div>
+        </section>
+
+        <section class="section contact" id="contacto">
+            <p class="tag">HABLEMOS</p>
+            <h2 class="section-title">Ponte en <span>contacto</span></h2>
+            <p class="section-description">¿Tienes una idea, un proyecto o deseas colaborar? Me gustaría conocer tu
+                propuesta.</p>
+                <div class="contact-card">
+                    <p><strong>Nombre:</strong> @Model.Name</p>
+                    <p><strong>Profesión:</strong> @Model.Profession</p>
+                    <p><strong>Ubicación:</strong> @Model.Location</p>
+                    <p><strong>Telefono:</strong> +505 85641004</p>
+
+                    <a class="btn btn-primary" href="https://github.com/ingehernangonz505-maker" target="_blank"
+                       rel="noopener noreferrer">Visitar GitHub</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <a href="#inicio" class="logo">JH<span>.</span></a>
+            <p>© @DateTime.Now.Year @Model.Name. Todos los derechos reservados.</p>
+            <a href="#inicio" class="back-top">Volver arriba ↑</a>
+        </footer>
+
